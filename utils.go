@@ -1,9 +1,22 @@
 package utils
 
-func Contains(a []string, x string) bool {
+import "fmt"
 
+func init() {
+	fmt.Println("INIT UTILS")
+}
+
+func Contains(a []string, x string) bool {
 	for _, n := range a {
 		if x == n {
+			return true
+		}
+	}
+	return false
+}
+func Containsint(a []int, x int) bool {
+	for _, value := range a {
+		if value == x {
 			return true
 		}
 	}
